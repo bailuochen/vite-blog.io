@@ -2,19 +2,25 @@
  * @Author: baiwx baiwx@citycloud.com.cn
  * @Date: 2022-05-17 13:44:19
  * @LastEditors: baiwx baiwx@citycloud.com.cn
- * @LastEditTime: 2022-05-17 17:18:26
+ * @LastEditTime: 2022-05-18 10:38:33
  * @FilePath: /vite/Luochen/src/App.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/background.png" />
-  <HelloWorld msg="Hello Luo Chen" />
+  <div class="common-layout">
+    <el-container>
+      <el-header>Header</el-header>
+      <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-main>Main</el-main>
+      </el-container>
+    </el-container>
+  </div>
 </template>
 
 <style>
@@ -34,6 +40,17 @@ html,body{
   color: #2c3e50;
   height: 100%;
   width: 100%;
-  background-color: rgba(69, 171, 115, 0.3);
+  /* background-color: rgba(69, 171, 115, 0.3); */
+}
+.common-layout{
+    height: 100%;
+    background-color: #ccc;
+    display: flex;
+}
+.el-header{
+  background-color: rgb(107, 96, 96);
+}
+.el-aside{
+  background-color: #fff;
 }
 </style>
